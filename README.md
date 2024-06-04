@@ -1,1 +1,0 @@
-# CompTIA-Security-mindmaps-notes
