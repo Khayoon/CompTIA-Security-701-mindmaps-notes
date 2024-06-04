@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Third-Party Risk Assessment and Management","children":[{"content":"Vendor Assessment","children":[{"content":"Penetration Testing: Evaluating a vendor's security posture through simulated cyberattacks to discover vulnerabilities.","children":[],"payload":{"lines":"4,5"}},{"content":"Right-to-audit Clause: A stipulation in contracts allowing an organization to audit the vendor's operations and security, ensuring compliance with agreed-upon standards.","children":[],"payload":{"lines":"5,6"}},{"content":"Evidence of Internal Audits: Requesting proof or results of a vendor's self-conducted audits to verify internal controls and processes.","children":[],"payload":{"lines":"6,7"}},{"content":"Independent Assessments: Relying on third-party evaluations or certifications of the vendor's operations and security.","children":[],"payload":{"lines":"7,8"}},{"content":"Supply Chain Analysis: Understanding and assessing the vendor's own third-party relationships, ensuring they don't introduce additional risks.","children":[],"payload":{"lines":"8,10"}}],"payload":{"lines":"2,3"}},{"content":"Vendor Selection","children":[{"content":"Due Diligence: Investigating and understanding a vendor's financial stability, reputation, history, and more before entering into an agreement.","children":[],"payload":{"lines":"12,13"}},{"content":"Conflict of Interest: Ensuring that the vendor has no conflicting business interests that might compromise the service's integrity.","children":[],"payload":{"lines":"13,15"}}],"payload":{"lines":"10,11"}},{"content":"Agreement Types","children":[{"content":"Service-level Agreement (SLA): Defines the level and quality of service expected from the vendor.","children":[],"payload":{"lines":"17,18"}},{"content":"Memorandum of Agreement (MOA) and Memorandum of Understanding (MOU): Documents outlining mutual understandings, goals, and responsibilities but might not be legally binding.","children":[],"payload":{"lines":"18,19"}},{"content":"Master Service Agreement (MSA): Outlines general terms and conditions for multiple transactions or agreements.","children":[],"payload":{"lines":"19,20"}},{"content":"Work Order (WO)/Statement of Work (SOW): Specifies the particular services a vendor will deliver in a specific instance.","children":[],"payload":{"lines":"20,21"}},{"content":"Non-disclosure Agreement (NDA): Binds the vendor to confidentiality, ensuring that organizational secrets or proprietary information isn't disclosed.","children":[],"payload":{"lines":"21,22"}},{"content":"Business Partners Agreement (BPA): Defines the terms and conditions between an organization and its business partner.","children":[],"payload":{"lines":"22,24"}}],"payload":{"lines":"15,16"}},{"content":"Vendor Monitoring","children":[{"content":"Continuous or periodic evaluation of a vendor's performance, security, and compliance with the terms of agreements.","children":[],"payload":{"lines":"26,28"}}],"payload":{"lines":"24,25"}},{"content":"Questionnaires","children":[{"content":"Structured forms or checklists used to gather information about a vendor's processes, controls, security measures, and more.","children":[],"payload":{"lines":"30,32"}}],"payload":{"lines":"28,29"}},{"content":"Rules of Engagement","children":[{"content":"Specific guidelines defining how the organization and the vendor will interact, especially relevant during evaluations, audits, or tests.","children":[],"payload":{"lines":"34,36"}}],"payload":{"lines":"32,33"}}],"payload":{"lines":"0,1"}},{})</script>
+</body>
+</html>

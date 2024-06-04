@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Types of Vulnerabilities","children":[{"content":"Application Vulnerabilities","children":[{"content":"Memory Injection: Introduction of malicious code into a target's memory.","children":[],"payload":{"lines":"4,5"}},{"content":"Buffer Overflow: Occurs when data exceeds the buffer's capacity, leading to overwrite of adjacent memory locations.","children":[],"payload":{"lines":"5,6"}},{"content":"Race Conditions: Situations where a system's behavior depends on the sequence or timing of uncontrollable events.","children":[],"payload":{"lines":"6,7"}},{"content":"Time-of-check (TOC) / Time-of-use (TOU): Vulnerability occurring if a system's state changes between the check of a condition and the use that results from the check.","children":[],"payload":{"lines":"7,8"}},{"content":"Malicious Update: Updates containing malicious code or weakening security mechanisms.","children":[],"payload":{"lines":"8,10"}}],"payload":{"lines":"2,3"}},{"content":"Operating System (OS)-based Vulnerabilities","children":[{"content":"Weaknesses in the OS that can be exploited to gain unauthorized access, elevate privileges, etc.","children":[],"payload":{"lines":"12,14"}}],"payload":{"lines":"10,11"}},{"content":"Web-based Vulnerabilities","children":[{"content":"Structured Query Language Injection (SQLi): Attackers insert malicious SQL code into input fields to run unauthorized SQL queries.","children":[],"payload":{"lines":"16,17"}},{"content":"Cross-site Scripting (XSS): Attackers inject malicious scripts into websites which are then executed by the victim's browser.","children":[],"payload":{"lines":"17,19"}}],"payload":{"lines":"14,15"}},{"content":"Hardware Vulnerabilities","children":[{"content":"Firmware Vulnerabilities: Weaknesses in low-level software that runs on hardware devices.","children":[],"payload":{"lines":"21,22"}},{"content":"End-of-life Hardware: Devices no longer supported by manufacturers, resulting in unpatched vulnerabilities.","children":[],"payload":{"lines":"22,23"}},{"content":"Legacy Hardware: Older hardware that may not be compatible with current security measures.","children":[],"payload":{"lines":"23,25"}}],"payload":{"lines":"19,20"}},{"content":"Virtualization Vulnerabilities","children":[{"content":"Virtual Machine (VM) Escape: An attacker runs code on a VM which allows them to break out and interact with the host system.","children":[],"payload":{"lines":"27,28"}},{"content":"Resource Reuse: Sensitive data can remain in system resources and be accessed by other processes.","children":[],"payload":{"lines":"28,30"}}],"payload":{"lines":"25,26"}},{"content":"Cloud-specific Vulnerabilities","children":[{"content":"Weaknesses specific to cloud services, including misconfigurations, insecure APIs, and data breaches.","children":[],"payload":{"lines":"32,34"}}],"payload":{"lines":"30,31"}},{"content":"Supply Chain Vulnerabilities","children":[{"content":"Service Provider: Vulnerabilities introduced by third-party service providers.","children":[],"payload":{"lines":"36,37"}},{"content":"Hardware Provider: Weaknesses or backdoors in hardware provided by third parties.","children":[],"payload":{"lines":"37,38"}},{"content":"Software Provider: Vulnerabilities in third-party software products or libraries.","children":[],"payload":{"lines":"38,40"}}],"payload":{"lines":"34,35"}},{"content":"Cryptographic Vulnerabilities","children":[{"content":"Flaws in encryption algorithms or their implementation that can be exploited to decrypt sensitive data.","children":[],"payload":{"lines":"42,44"}}],"payload":{"lines":"40,41"}},{"content":"Misconfiguration","children":[{"content":"Incorrectly configured software or hardware that leaves security gaps.","children":[],"payload":{"lines":"46,48"}}],"payload":{"lines":"44,45"}},{"content":"Mobile Device Vulnerabilities","children":[{"content":"Side Loading: Installing apps from unofficial sources can introduce malicious apps.","children":[],"payload":{"lines":"50,51"}},{"content":"Jailbreaking: Bypassing the built-in security mechanisms of iOS, leaving the device vulnerable.","children":[],"payload":{"lines":"51,53"}}],"payload":{"lines":"48,49"}},{"content":"Zero-day Vulnerabilities","children":[{"content":"Previously unknown vulnerabilities that are not yet patched by vendors.","children":[],"payload":{"lines":"55,56"}}],"payload":{"lines":"53,54"}}],"payload":{"lines":"0,1"}},{})</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Analyzing Indicators of Malicious Activity","children":[{"content":"Malware Attacks","children":[{"content":"General Indicators: Unexpected system behavior, performance issues, loss of data, unauthorized data access or transmission.","children":[],"payload":{"lines":"4,5"}},{"content":"Ransomware: Sudden file encryption, ransom note displayed, change of file extensions.","children":[],"payload":{"lines":"5,6"}},{"content":"Trojan: Unwanted applications running, unauthorized system changes.","children":[],"payload":{"lines":"6,7"}},{"content":"Worm: Rapid spread across networked devices, self-replicating behavior.","children":[],"payload":{"lines":"7,8"}},{"content":"Spyware: Unauthorized data transmission, popup ads, changed browser settings.","children":[],"payload":{"lines":"8,9"}},{"content":"Bloatware: Unwanted software installations, reduced system performance.","children":[],"payload":{"lines":"9,10"}},{"content":"Virus: Corrupt files, altered program behavior, boot issues.","children":[],"payload":{"lines":"10,11"}},{"content":"Keylogger: Unauthorized data access, unexpected inputs recorded.","children":[],"payload":{"lines":"11,12"}},{"content":"Logic Bomb: Events triggered at specific conditions or dates.","children":[],"payload":{"lines":"12,13"}},{"content":"Rootkit: Undetectable malware presence, deep system control by unknown entities.","children":[],"payload":{"lines":"13,15"}}],"payload":{"lines":"2,3"}},{"content":"Physical Attacks","children":[{"content":"Brute Force: Visible damage to locks or entry points, unauthorized entry.","children":[],"payload":{"lines":"17,18"}},{"content":"RFID Cloning: Unauthorized access using cloned RFID tags/cards.","children":[],"payload":{"lines":"18,19"}},{"content":"Environmental: Manipulation of environmental controls like heating or cooling.","children":[],"payload":{"lines":"19,21"}}],"payload":{"lines":"15,16"}},{"content":"Network Attacks","children":[{"content":"Distributed Denial-of-Service (DDoS):","children":[{"content":"Amplified/Reflected: Large amounts of traffic from a multitude of sources.","children":[],"payload":{"lines":"24,25"}}],"payload":{"lines":"23,25"}},{"content":"DNS Attacks: Redirected traffic, unauthorized domain changes.","children":[],"payload":{"lines":"25,26"}},{"content":"Wireless Attacks: Unauthorized devices on network, unknown SSIDs.","children":[],"payload":{"lines":"26,27"}},{"content":"On-path (Man-in-the-Middle): Intercepted data, altered communication.","children":[],"payload":{"lines":"27,28"}},{"content":"Credential Replay: Multiple login attempts from the same credentials.","children":[],"payload":{"lines":"28,29"}},{"content":"Malicious Code: Unexpected network traffic, data breaches.","children":[],"payload":{"lines":"29,31"}}],"payload":{"lines":"21,22"}},{"content":"Application Attacks","children":[{"content":"Injection: Unexpected inputs causing errors or malicious activity.","children":[],"payload":{"lines":"33,34"}},{"content":"Buffer Overflow: Application crashes, unauthorized code execution.","children":[],"payload":{"lines":"34,35"}},{"content":"Replay: Repeated transaction attempts, data resubmission.","children":[],"payload":{"lines":"35,36"}},{"content":"Privilege Escalation: Lower-level users gaining higher-level access.","children":[],"payload":{"lines":"36,37"}},{"content":"Forgery: Altered data or transactions, impersonation.","children":[],"payload":{"lines":"37,38"}},{"content":"Directory Traversal: Unauthorized file access, data breaches.","children":[],"payload":{"lines":"38,40"}}],"payload":{"lines":"31,32"}},{"content":"Cryptographic Attacks","children":[{"content":"Downgrade: Forced use of weaker cryptographic methods.","children":[],"payload":{"lines":"42,43"}},{"content":"Collision: Two different data inputs producing the same output hash.","children":[],"payload":{"lines":"43,44"}},{"content":"Birthday Attack: Exploiting the probability of two distinct inputs having the same output.","children":[],"payload":{"lines":"44,46"}}],"payload":{"lines":"40,41"}},{"content":"Password Attacks","children":[{"content":"Spraying: Multiple login attempts using common passwords.","children":[],"payload":{"lines":"48,49"}},{"content":"Brute Force: Rapid succession of login attempts with varied combinations.","children":[],"payload":{"lines":"49,51"}}],"payload":{"lines":"46,47"}},{"content":"General Indicators","children":[{"content":"Account Lockout: Multiple failed login attempts.","children":[],"payload":{"lines":"53,54"}},{"content":"Concurrent Session Usage: Single account logged in from multiple locations.","children":[],"payload":{"lines":"54,55"}},{"content":"Blocked Content: Firewall or content filters flagging malicious content.","children":[],"payload":{"lines":"55,56"}},{"content":"Impossible Travel: Logins from geographically distant locations in a short timeframe.","children":[],"payload":{"lines":"56,57"}},{"content":"Resource Consumption: Unusually high CPU, memory, or bandwidth usage.","children":[],"payload":{"lines":"57,58"}},{"content":"Resource Inaccessibility: Services or resources being unavailable.","children":[],"payload":{"lines":"58,59"}},{"content":"Out-of-cycle Logging: Logs generated outside of expected timeframes.","children":[],"payload":{"lines":"59,60"}},{"content":"Published/Documented: Known vulnerabilities or exploits.","children":[],"payload":{"lines":"60,61"}},{"content":"Missing Logs: Evidence of logs being deleted or altered.","children":[],"payload":{"lines":"61,62"}}],"payload":{"lines":"51,52"}}],"payload":{"lines":"0,1"}},{})</script>
+</body>
+</html>

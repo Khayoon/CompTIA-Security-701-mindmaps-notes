@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Mitigation Techniques and Architecture Models","children":[{"content":"Architecture Models","children":[{"content":"Cloud","children":[{"content":"Shared Responsibility: Cloud providers handle infrastructure, user data management is typically the user's responsibility.","children":[],"payload":{"lines":"6,7"}},{"content":"Responsibility Matrix: Outlines who is responsible for what in a cloud environment.","children":[],"payload":{"lines":"7,8"}},{"content":"Hybrid Considerations: Merging on-premises and cloud can complicate security.","children":[],"payload":{"lines":"8,9"}},{"content":"Third-party Vendors: More vendors can increase risk but may also distribute responsibility.","children":[],"payload":{"lines":"9,11"}}],"payload":{"lines":"4,5"}},{"content":"Infrastructure as Code (IaC)","children":[{"content":"Automation can speed deployment but can also propagate errors or vulnerabilities quickly.","children":[],"payload":{"lines":"13,15"}}],"payload":{"lines":"11,12"}},{"content":"Serverless","children":[{"content":"Reduced infrastructure overhead but increased reliance on third-party services.","children":[],"payload":{"lines":"17,19"}}],"payload":{"lines":"15,16"}},{"content":"Microservices","children":[{"content":"Isolation of services can limit breach scope, but increased inter-service communication can introduce new vulnerabilities.","children":[],"payload":{"lines":"21,23"}}],"payload":{"lines":"19,20"}},{"content":"Network Infrastructure","children":[{"content":"Design and segmentation can greatly impact security posture.","children":[{"content":"Physical Isolation (Air-gapped): No external network connections, reducing external threats.","children":[],"payload":{"lines":"26,27"}},{"content":"Logical Segmentation: Isolate parts of the network to contain breaches.","children":[],"payload":{"lines":"27,28"}},{"content":"Software-defined Networking (SDN): Greater flexibility but potential for misconfigurations.","children":[],"payload":{"lines":"28,30"}}],"payload":{"lines":"25,30"}}],"payload":{"lines":"23,24"}},{"content":"On-premises","children":[{"content":"Full control over infrastructure but also full responsibility for all aspects of security.","children":[],"payload":{"lines":"32,34"}}],"payload":{"lines":"30,31"}},{"content":"Centralized vs. Decentralized","children":[{"content":"Centralized: Offers a single control point but can be a single point of failure.","children":[],"payload":{"lines":"36,37"}},{"content":"Decentralized: Distributes risk but can be harder to manage.","children":[],"payload":{"lines":"37,39"}}],"payload":{"lines":"34,35"}},{"content":"Containerization","children":[{"content":"Lightweight, isolated environments but potential for container vulnerabilities.","children":[],"payload":{"lines":"41,43"}}],"payload":{"lines":"39,40"}},{"content":"Virtualization","children":[{"content":"Efficient resource use and isolation, but hypervisor vulnerabilities can impact multiple virtual machines.","children":[],"payload":{"lines":"45,47"}}],"payload":{"lines":"43,44"}},{"content":"IoT","children":[{"content":"Expanded attack surface with many devices, often with limited security features.","children":[],"payload":{"lines":"49,51"}}],"payload":{"lines":"47,48"}},{"content":"ICS/SCADA","children":[{"content":"Critical infrastructure with potential for physical harm if breached.","children":[],"payload":{"lines":"53,55"}}],"payload":{"lines":"51,52"}},{"content":"RTOS (Real-time Operating Systems)","children":[{"content":"Time-sensitive operations can make patching or downtime difficult.","children":[],"payload":{"lines":"57,59"}}],"payload":{"lines":"55,56"}},{"content":"Embedded Systems","children":[{"content":"Often lack sophisticated security features and may be difficult to update.","children":[],"payload":{"lines":"61,63"}}],"payload":{"lines":"59,60"}},{"content":"High Availability","children":[{"content":"Infrastructure resilience but requires synchronization and potential for replication of vulnerabilities.","children":[],"payload":{"lines":"65,67"}}],"payload":{"lines":"63,64"}}],"payload":{"lines":"2,3"}},{"content":"Considerations when Evaluating Models","children":[{"content":"Availability: Can it be accessed when needed?","children":[],"payload":{"lines":"69,70"}},{"content":"Resilience: Can it recover from attacks or failures?","children":[],"payload":{"lines":"70,71"}},{"content":"Cost: What are the financial implications?","children":[],"payload":{"lines":"71,72"}},{"content":"Responsiveness: How quickly can it adapt or respond?","children":[],"payload":{"lines":"72,73"}},{"content":"Scalability: Can it handle growth?","children":[],"payload":{"lines":"73,74"}},{"content":"Ease of Deployment: How simple is it to roll out?","children":[],"payload":{"lines":"74,75"}},{"content":"Risk Transference: Can risks be shifted elsewhere (e.g., to cloud providers)?","children":[],"payload":{"lines":"75,76"}},{"content":"Ease of Recovery: How simple is it to recover after an incident?","children":[],"payload":{"lines":"76,77"}},{"content":"Patch Availability: Can security updates be applied regularly?","children":[],"payload":{"lines":"77,78"}},{"content":"Inability to Patch: Are there constraints preventing regular updates?","children":[],"payload":{"lines":"78,79"}},{"content":"Power: Does it meet processing needs?","children":[],"payload":{"lines":"79,80"}},{"content":"Compute: Can it handle the computational load?","children":[],"payload":{"lines":"80,81"}}],"payload":{"lines":"67,68"}}],"payload":{"lines":"0,1"}},{})</script>
+</body>
+</html>

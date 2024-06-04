@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Types and Purposes of Audits and Assessments","children":[{"content":"Attestation","children":[{"content":"A formal declaration, often by management or a third party, that certain conditions or requirements have been met. Typically, it's a written confirmation of accuracy or authenticity.","children":[],"payload":{"lines":"6,8"}}],"payload":{"lines":"4,5"}},{"content":"Internal Audits and Assessments","children":[{"content":"<strong>Compliance</strong>: Evaluations conducted within the organization to ensure that different departments and operations align with internal policies and external regulatory requirements.","children":[],"payload":{"lines":"10,11"}},{"content":"<strong>Audit Committee</strong>: A group within the organization (often part of the board of directors) that oversees the internal audit function, financial reporting, and regulatory compliance.","children":[],"payload":{"lines":"11,12"}},{"content":"<strong>Self-assessments</strong>: Evaluations conducted by departments or teams to assess their own processes, risks, and compliance. Often less formal than other audits and used for internal improvement.","children":[],"payload":{"lines":"12,14"}}],"payload":{"lines":"8,9"}},{"content":"External Audits and Assessments","children":[{"content":"<strong>Regulatory</strong>: Audits conducted by governmental or regulatory bodies to ensure that an organization is complying with relevant laws and regulations.","children":[],"payload":{"lines":"16,17"}},{"content":"<strong>Examinations</strong>: Deep-dive evaluations often associated with specific regulations or standards.","children":[],"payload":{"lines":"17,18"}},{"content":"<strong>Assessment</strong>: General evaluation by external entities to determine the state of certain processes or systems.","children":[],"payload":{"lines":"18,19"}},{"content":"<strong>Independent Third-party Audit</strong>: An evaluation by an external organization that is not affiliated with the entity being audited, ensuring impartiality and objectivity.","children":[],"payload":{"lines":"19,21"}}],"payload":{"lines":"14,15"}},{"content":"Penetration Testing","children":[{"content":"A cybersecurity practice where experts attempt to breach an organization's defenses (with permission) to identify vulnerabilities.","children":[{"content":"<strong>Physical</strong>: Testing focused on physical barriers and controls, such as locks, access badges, and surveillance.","children":[],"payload":{"lines":"24,25"}},{"content":"<strong>Offensive</strong>: Proactive approaches to identify and exploit vulnerabilities in systems or networks.","children":[],"payload":{"lines":"25,26"}},{"content":"<strong>Defensive</strong>: Evaluates the effectiveness of defensive measures in place by simulating attacks.","children":[],"payload":{"lines":"26,27"}},{"content":"<strong>Integrated</strong>: Combines multiple methods and targets both physical and digital vulnerabilities.","children":[],"payload":{"lines":"27,28"}},{"content":"<strong>Known Environment</strong>: Testers are given comprehensive information about the target environment.","children":[],"payload":{"lines":"28,29"}},{"content":"<strong>Partially Known Environment</strong>: Testers are given some, but not all, information about the target.","children":[],"payload":{"lines":"29,30"}},{"content":"<strong>Unknown Environment</strong>: Testers are given no prior knowledge about the target systems or infrastructure.","children":[],"payload":{"lines":"30,31"}},{"content":"<strong>Reconnaissance</strong>:","children":[{"content":"<strong>Passive</strong>: Gathering information without directly interacting with the target system, e.g., open-source intelligence.","children":[],"payload":{"lines":"32,33"}},{"content":"<strong>Active</strong>: Directly interacting with the target to gather information, e.g., port scanning.","children":[],"payload":{"lines":"33,35"}}],"payload":{"lines":"31,35"}}],"payload":{"lines":"23,35"}}],"payload":{"lines":"21,22"}}],"payload":{"lines":"0,1"}},{})</script>
+</body>
+</html>

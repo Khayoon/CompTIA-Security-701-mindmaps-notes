@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Importance of Using Appropriate Cryptographic Solutions","children":[{"content":"Public Key Infrastructure (PKI)","children":[{"content":"Public/Private Key: Ensures secure communication where only the private key holder can decrypt what the public key encrypts.","children":[],"payload":{"lines":"4,5"}},{"content":"Key Escrow: Allows a trusted third party to hold cryptographic keys, ensuring they're available if original holders lose access or in legal scenarios.","children":[],"payload":{"lines":"5,7"}}],"payload":{"lines":"2,3"}},{"content":"Encryption","children":[{"content":"Level:","children":[{"content":"Full-disk: Encrypts an entire storage disk, protecting data if the physical device is lost or stolen.","children":[],"payload":{"lines":"10,11"}},{"content":"Partition, Volume: Encrypts specific sections of a storage device.","children":[],"payload":{"lines":"11,12"}},{"content":"File, Database, Record: Encrypts individual files, databases, or records within.","children":[],"payload":{"lines":"12,13"}},{"content":"Transport/Communication: Secures data as it's transmitted across networks, like with HTTPS.","children":[],"payload":{"lines":"13,14"}}],"payload":{"lines":"9,14"}},{"content":"Asymmetric/Symmetric: Different encryption methods; asymmetric uses public/private key pairs, while symmetric uses the same key for both encryption and decryption.","children":[],"payload":{"lines":"14,15"}},{"content":"Key Exchange: The process of securely exchanging cryptographic keys.","children":[],"payload":{"lines":"15,16"}},{"content":"Algorithms: Specific procedures for encrypting and decrypting data (e.g., AES, RSA).","children":[],"payload":{"lines":"16,17"}},{"content":"Key Length: The longer the key, the harder it is to crack, but also potentially slower in operation.","children":[],"payload":{"lines":"17,19"}}],"payload":{"lines":"7,8"}},{"content":"Tools","children":[{"content":"TPM: A dedicated microcontroller that stores keys, passwords, and digital certificates securely.","children":[],"payload":{"lines":"21,22"}},{"content":"HSM: Physical device that safeguards and manages digital keys, providing hardware-level security.","children":[],"payload":{"lines":"22,23"}},{"content":"Key Management System: Systems designed to manage cryptographic keys throughout their lifecycle.","children":[],"payload":{"lines":"23,24"}},{"content":"Secure Enclave: A hardware-based secure storage area in processors, isolating it from the main processor to secure sensitive data.","children":[],"payload":{"lines":"24,26"}}],"payload":{"lines":"19,20"}},{"content":"Obfuscation","children":[{"content":"Steganography: Hiding data within other data (e.g., embedding a secret message in an image).","children":[],"payload":{"lines":"28,29"}},{"content":"Tokenization: Replacing sensitive data with non-sensitive placeholders.","children":[],"payload":{"lines":"29,30"}},{"content":"Data Masking: Concealing specific data within a database, making it inaccessible to unauthorized users.","children":[],"payload":{"lines":"30,32"}}],"payload":{"lines":"26,27"}},{"content":"Hashing","children":[{"content":"Converts data into a fixed-size string, ensuring data integrity.","children":[],"payload":{"lines":"34,36"}}],"payload":{"lines":"32,33"}},{"content":"Salting","children":[{"content":"Random data added before hashing to ensure the same input produces different outputs.","children":[],"payload":{"lines":"38,40"}}],"payload":{"lines":"36,37"}},{"content":"Digital Signatures","children":[{"content":"Confirms the authenticity of a digital document or message.","children":[],"payload":{"lines":"42,44"}}],"payload":{"lines":"40,41"}},{"content":"Key Stretching","children":[{"content":"Makes keys resistant to brute force attacks by making the key derivation process more computationally intensive.","children":[],"payload":{"lines":"46,48"}}],"payload":{"lines":"44,45"}},{"content":"Blockchain","children":[{"content":"Distributed, decentralized ledgers that use cryptographic solutions to ensure data integrity.","children":[],"payload":{"lines":"50,52"}}],"payload":{"lines":"48,49"}},{"content":"Open Public Ledger","children":[{"content":"Transparent, openly accessible ledger where all transactions are visible.","children":[],"payload":{"lines":"54,56"}}],"payload":{"lines":"52,53"}},{"content":"Certificates","children":[{"content":"Certificate Authorities (CA): Organizations that issue digital certificates.","children":[],"payload":{"lines":"58,59"}},{"content":"CRLs: Lists of certificates revoked before their expiration.","children":[],"payload":{"lines":"59,60"}},{"content":"OCSP: Protocol to obtain the revocation status of a certificate in real-time.","children":[],"payload":{"lines":"60,61"}},{"content":"Self-signed/Third-party: Certificates that are signed by the owner vs. a trusted third-party.","children":[],"payload":{"lines":"61,62"}},{"content":"Root of Trust: Starting point in a security domain from which other security mechanisms derive.","children":[],"payload":{"lines":"62,63"}},{"content":"CSR Generation: A request sent from an applicant to a CA to get a digital identity certificate.","children":[],"payload":{"lines":"63,64"}},{"content":"Wildcard: Certificates for securing domain and its subdomains.","children":[],"payload":{"lines":"64,66"}}],"payload":{"lines":"56,57"}},{"content":"Importance","children":[{"content":"Data in transit could be intercepted and read.","children":[],"payload":{"lines":"68,69"}},{"content":"Authenticity of data and sources couldn't be verified.","children":[],"payload":{"lines":"69,70"}},{"content":"Sensitive information would be vulnerable at rest.","children":[],"payload":{"lines":"70,71"}},{"content":"Transactions could be altered without detection.","children":[],"payload":{"lines":"71,72"}},{"content":"By employing appropriate cryptographic measures, organizations can protect data, ensure its integrity, and validate its origin, which is essential in today's cyber threat landscape.","children":[],"payload":{"lines":"72,73"}}],"payload":{"lines":"66,67"}}],"payload":{"lines":"0,1"}},{})</script>
+</body>
+</html>

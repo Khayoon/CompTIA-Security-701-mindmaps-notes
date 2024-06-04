@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Fundamental Security Concepts","children":[{"content":"CIA (Confidentiality, Integrity, and Availability)","children":[{"content":"Confidentiality: Ensures that data is accessed only by authorized individuals.","children":[],"payload":{"lines":"4,5"}},{"content":"Integrity: Ensures data remains accurate and untouched by unauthorized entities.","children":[],"payload":{"lines":"5,6"}},{"content":"Availability: Ensures data and systems are accessible when needed.","children":[],"payload":{"lines":"6,8"}}],"payload":{"lines":"2,3"}},{"content":"Non-repudiation","children":[{"content":"Guarantees that a sender of information cannot later deny having sent it and that the receiver cannot deny having received it.","children":[],"payload":{"lines":"10,12"}}],"payload":{"lines":"8,9"}},{"content":"AAA (Authentication, Authorization, and Accounting)","children":[{"content":"Authentication: Verifying the identity of users, systems, or entities.","children":[{"content":"Authenticating People: Using passwords, biometrics, or tokens.","children":[],"payload":{"lines":"15,16"}},{"content":"Authenticating Systems: Using certificates or keys.","children":[],"payload":{"lines":"16,17"}}],"payload":{"lines":"14,17"}},{"content":"Authorization: Defines permissions, determining what authenticated users or systems are allowed to do.","children":[{"content":"Authorization Models: Examples include Role-Based Access Control (RBAC) and Mandatory Access Control (MAC).","children":[],"payload":{"lines":"18,19"}}],"payload":{"lines":"17,19"}},{"content":"Accounting: Tracks user activities, ensuring they are operating within their designated permissions.","children":[],"payload":{"lines":"19,21"}}],"payload":{"lines":"12,13"}},{"content":"Gap Analysis","children":[{"content":"A process to identify differences between current security practices and desired outcomes or standards.","children":[],"payload":{"lines":"23,25"}}],"payload":{"lines":"21,22"}},{"content":"Zero Trust","children":[{"content":"Control Plane:","children":[{"content":"Adaptive Identity: Dynamically adjusting user/system identity verification based on context.","children":[],"payload":{"lines":"28,29"}},{"content":"Threat Scope Reduction: Minimizing the attack surface.","children":[],"payload":{"lines":"29,30"}},{"content":"Policy-driven Access Control: Access granted based on policies rather than static permissions.","children":[],"payload":{"lines":"30,31"}},{"content":"Policy Administrator: Manages and updates access policies.","children":[],"payload":{"lines":"31,32"}},{"content":"Policy Engine: Processes and evaluates access requests against set policies.","children":[],"payload":{"lines":"32,33"}}],"payload":{"lines":"27,33"}},{"content":"Data Plane:","children":[{"content":"Implicit Trust Zones: Areas where trust is assumed by default.","children":[],"payload":{"lines":"34,35"}},{"content":"Subject/System: Entities requesting or being granted access.","children":[],"payload":{"lines":"35,36"}},{"content":"Policy Enforcement Point: Where access decisions are executed based on policies.","children":[],"payload":{"lines":"36,38"}}],"payload":{"lines":"33,38"}}],"payload":{"lines":"25,26"}},{"content":"Physical Security","children":[{"content":"Bollards: Short posts to prevent vehicle intrusion.","children":[],"payload":{"lines":"40,41"}},{"content":"Access Control Vestibule: Secured entry space, often with two sets of doors to control access.","children":[],"payload":{"lines":"41,42"}},{"content":"Fencing: Barriers to deter unauthorized entries.","children":[],"payload":{"lines":"42,43"}},{"content":"Video Surveillance: Cameras monitoring and recording activities.","children":[],"payload":{"lines":"43,44"}},{"content":"Security Guard: Human personnel guarding premises.","children":[],"payload":{"lines":"44,45"}},{"content":"Access Badge: ID card granting access to buildings or areas.","children":[],"payload":{"lines":"45,46"}},{"content":"Lighting: Ensures visibility, often deterring unauthorized activities.","children":[],"payload":{"lines":"46,47"}},{"content":"Sensors:","children":[{"content":"Infrared: Detects heat emissions, often from humans.","children":[],"payload":{"lines":"48,49"}},{"content":"Pressure: Detects weight or pressure changes, such as footsteps.","children":[],"payload":{"lines":"49,50"}},{"content":"Microwave: Uses microwave signals to detect movement.","children":[],"payload":{"lines":"50,51"}},{"content":"Ultrasonic: Uses sound waves to detect presence or movement.","children":[],"payload":{"lines":"51,53"}}],"payload":{"lines":"47,53"}}],"payload":{"lines":"38,39"}},{"content":"Deception and Disruption Technology","children":[{"content":"Honeypot: Decoy system or data set up to lure attackers.","children":[],"payload":{"lines":"55,56"}},{"content":"Honeynet: Network of honeypots.","children":[],"payload":{"lines":"56,57"}},{"content":"Honeyfile: Decoy file placed to detect unauthorized access.","children":[],"payload":{"lines":"57,58"}},{"content":"Honeytoken: A piece of data used to alert when accessed, it has no real-world use other than being a trap.","children":[],"payload":{"lines":"58,60"}}],"payload":{"lines":"53,54"}}],"payload":{"lines":"0,1"}},{})</script>
+</body>
+</html>

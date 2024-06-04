@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Mitigation Techniques Used to Secure the Enterprise","children":[{"content":"Segmentation","children":[{"content":"Divides a network into smaller segments to isolate data and services.","children":[{"content":"If a breach occurs in one segment, it prevents the attacker from easily accessing other parts of the network.","children":[],"payload":{"lines":"5,7"}}],"payload":{"lines":"4,7"}}],"payload":{"lines":"2,3"}},{"content":"Access Control","children":[{"content":"Access Control List (ACL):","children":[{"content":"Defines who can access a particular resource and what operations they can perform.","children":[],"payload":{"lines":"10,11"}}],"payload":{"lines":"9,11"}},{"content":"Permissions:","children":[{"content":"Specifies specific rights users have over a resource, such as read, write, execute, etc.","children":[],"payload":{"lines":"12,14"}}],"payload":{"lines":"11,14"}}],"payload":{"lines":"7,8"}},{"content":"Application Allow List","children":[{"content":"Specifies which applications are allowed to run on a system.","children":[{"content":"Anything not on the list is prevented from executing, minimizing the risk of malicious software.","children":[],"payload":{"lines":"17,19"}}],"payload":{"lines":"16,19"}}],"payload":{"lines":"14,15"}},{"content":"Isolation","children":[{"content":"Keeps different processes or systems separated so if one is compromised, it doesn't affect the others.","children":[],"payload":{"lines":"21,23"}}],"payload":{"lines":"19,20"}},{"content":"Patching","children":[{"content":"Regularly updates software and systems to fix known vulnerabilities, reducing the attack surface.","children":[],"payload":{"lines":"25,27"}}],"payload":{"lines":"23,24"}},{"content":"Encryption","children":[{"content":"Encodes data to ensure confidentiality.","children":[{"content":"Even if data is accessed or stolen, it remains unreadable without the decryption key.","children":[],"payload":{"lines":"30,32"}}],"payload":{"lines":"29,32"}}],"payload":{"lines":"27,28"}},{"content":"Monitoring","children":[{"content":"Keeps an eye on system activity and traffic to detect and respond to any suspicious activities or breaches.","children":[],"payload":{"lines":"34,36"}}],"payload":{"lines":"32,33"}},{"content":"Least Privilege","children":[{"content":"Grants users only the permissions they need to perform their roles.","children":[{"content":"Reduces the risk of insiders causing damage (intentionally or unintentionally) and limits what attackers can do if they compromise an account.","children":[],"payload":{"lines":"39,41"}}],"payload":{"lines":"38,41"}}],"payload":{"lines":"36,37"}},{"content":"Configuration Enforcement","children":[{"content":"Ensures that systems are set up according to best practices and company policies, minimizing vulnerabilities.","children":[],"payload":{"lines":"43,45"}}],"payload":{"lines":"41,42"}},{"content":"Decommissioning","children":[{"content":"Safely removes systems or software from operation.","children":[{"content":"Ensures that old, potentially vulnerable software or hardware doesn't remain a weak point in the network.","children":[],"payload":{"lines":"48,50"}}],"payload":{"lines":"47,50"}}],"payload":{"lines":"45,46"}},{"content":"Hardening Techniques","children":[{"content":"Encryption: Ensures data confidentiality at rest and in transit.","children":[],"payload":{"lines":"52,53"}},{"content":"Installation of Endpoint Protection: Provides real-time threat protection for endpoints.","children":[],"payload":{"lines":"53,54"}},{"content":"Host-based Firewall: Controls incoming and outgoing network traffic at the machine level.","children":[],"payload":{"lines":"54,55"}},{"content":"Host-based Intrusion Prevention System (HIPS): Monitors and blocks potentially harmful activity on a host.","children":[],"payload":{"lines":"55,56"}},{"content":"Disabling Ports/Protocols: Deactivates unnecessary or vulnerable network ports and communication protocols.","children":[],"payload":{"lines":"56,57"}},{"content":"Default Password Changes: Avoids using easily guessable or manufacturer-set passwords.","children":[],"payload":{"lines":"57,58"}},{"content":"Removal of Unnecessary Software: Minimizes potential vulnerabilities by reducing the attack surface.","children":[],"payload":{"lines":"58,59"}}],"payload":{"lines":"50,51"}}],"payload":{"lines":"0,1"}},{})</script>
+</body>
+</html>

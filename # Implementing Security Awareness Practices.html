@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Implementing Security Awareness Practices","children":[{"content":"1. Phishing","children":[{"content":"Campaigns","children":[{"content":"<strong>Launch Controlled Phishing Campaigns</strong>: Regularly conduct internal phishing tests to evaluate employee awareness and response.","children":[],"payload":{"lines":"10,11"}},{"content":"<strong>Variety of Templates</strong>: Use diverse and realistic phishing templates that replicate actual phishing tactics, such as fake IT support requests or counterfeit invoices.","children":[],"payload":{"lines":"11,13"}}],"payload":{"lines":"8,9"}},{"content":"Recognizing a Phishing Attempt","children":[{"content":"<strong>Training Sessions</strong>: Organize training sessions to educate employees on identifying phishing attempts. Highlight key indicators like unusual email addresses, spelling errors, urgent requests, and unexpected attachments.","children":[],"payload":{"lines":"15,16"}},{"content":"<strong>Workshops</strong>: Conduct hands-on workshops where employees can practice identifying phishing emails.","children":[],"payload":{"lines":"16,18"}}],"payload":{"lines":"13,14"}},{"content":"Responding to Reported Suspicious Messages","children":[{"content":"<strong>Encourage Reporting</strong>: Promote a culture where employees feel comfortable reporting suspicious emails without fear of retribution.","children":[],"payload":{"lines":"20,21"}},{"content":"<strong>Protocol for Response</strong>: Develop and disseminate a clear protocol for IT and security teams to handle reported phishing attempts, including immediate analysis and response actions.","children":[],"payload":{"lines":"21,23"}}],"payload":{"lines":"18,19"}}],"payload":{"lines":"6,7"}},{"content":"2. Anomalous Behavior Recognition","children":[{"content":"Risky Behaviors","children":[{"content":"<strong>Examples</strong>: Provide clear examples of risky behaviors, such as sharing passwords or accessing sensitive data from unsecured networks.","children":[],"payload":{"lines":"27,29"}}],"payload":{"lines":"25,26"}},{"content":"Unexpected Behaviors","children":[{"content":"<strong>Training</strong>: Train employees to recognize unusual system behaviors like sudden shutdowns or unauthorized software installations.","children":[],"payload":{"lines":"31,33"}}],"payload":{"lines":"29,30"}},{"content":"Unintentional Mistakes","children":[{"content":"<strong>Consequences</strong>: Educate employees on the potential consequences of mistakes, such as accidentally emailing sensitive information, and how to avoid them.","children":[],"payload":{"lines":"35,37"}}],"payload":{"lines":"33,34"}}],"payload":{"lines":"23,24"}},{"content":"3. User Guidance and Training","children":[{"content":"Policies and Handbooks","children":[{"content":"<strong>Regular Updates</strong>: Keep security policy handbooks up to date and distribute them regularly.","children":[],"payload":{"lines":"41,42"}},{"content":"<strong>Annual Briefings</strong>: Hold yearly briefings to refresh and update employees on these guidelines.","children":[],"payload":{"lines":"42,44"}}],"payload":{"lines":"39,40"}},{"content":"Situational Awareness","children":[{"content":"<strong>Seminars</strong>: Host regular seminars on the latest security threats and trends.","children":[],"payload":{"lines":"46,48"}}],"payload":{"lines":"44,45"}},{"content":"Insider Threat","children":[{"content":"<strong>Awareness</strong>: Make employees aware that threats can originate from within the organization as well as from external sources.","children":[],"payload":{"lines":"50,52"}}],"payload":{"lines":"48,49"}},{"content":"Password Management","children":[{"content":"<strong>Strong Passwords</strong>: Encourage the use of strong, unique passwords and recommend password managers to help employees manage them securely.","children":[],"payload":{"lines":"54,56"}}],"payload":{"lines":"52,53"}},{"content":"Removable Media and Cables","children":[{"content":"<strong>Guidance</strong>: Advise against the use of unauthorized removable media and cables to prevent hardware-based attacks.","children":[],"payload":{"lines":"58,60"}}],"payload":{"lines":"56,57"}},{"content":"Social Engineering","children":[{"content":"<strong>Workshops</strong>: Conduct workshops focused on recognizing and resisting social engineering tactics.","children":[],"payload":{"lines":"62,64"}}],"payload":{"lines":"60,61"}},{"content":"Operational Security","children":[{"content":"<strong>Best Practices</strong>: Discuss best practices for maintaining security in daily operations, such as logging off when not in use.","children":[],"payload":{"lines":"66,68"}}],"payload":{"lines":"64,65"}},{"content":"Hybrid/Remote Work Environments","children":[{"content":"<strong>Guidelines</strong>: Provide guidelines for secure remote work, including the use of VPNs and secure internet connections.","children":[],"payload":{"lines":"70,72"}}],"payload":{"lines":"68,69"}}],"payload":{"lines":"37,38"}},{"content":"4. Reporting and Monitoring","children":[{"content":"Initial Baseline","children":[{"content":"<strong>Establish Baseline</strong>: Conduct initial tests and evaluations to establish a baseline of employee security awareness.","children":[],"payload":{"lines":"76,78"}}],"payload":{"lines":"74,75"}},{"content":"Recurring Assessments","children":[{"content":"<strong>Regular Reassessments</strong>: Continuously reassess and report on the current level of security awareness, adjusting training programs as needed.","children":[],"payload":{"lines":"80,82"}}],"payload":{"lines":"78,79"}}],"payload":{"lines":"72,73"}},{"content":"5. Development","children":[{"content":"Comprehensive Program","children":[{"content":"<strong>Iterative Development</strong>: Develop a comprehensive, adaptable security awareness program that evolves with new threats and incorporates employee feedback.","children":[],"payload":{"lines":"86,88"}}],"payload":{"lines":"84,85"}}],"payload":{"lines":"82,83"}},{"content":"6. Execution","children":[{"content":"Company-wide Deployment","children":[{"content":"<strong>Inclusive Training</strong>: Ensure the training program is deployed across the entire organization, from top management to entry-level employees.","children":[],"payload":{"lines":"92,93"}},{"content":"<strong>Multiple Formats</strong>: Use a combination of online modules, in-person workshops, and hands-on exercises to reinforce learning.","children":[],"payload":{"lines":"93,95"}}],"payload":{"lines":"90,91"}}],"payload":{"lines":"88,89"}},{"content":"Conclusion","children":[],"payload":{"lines":"95,96"}}],"payload":{"lines":"0,1"}},{})</script>
+</body>
+</html>

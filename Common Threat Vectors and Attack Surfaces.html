@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"Common Threat Vectors and Attack Surfaces","children":[{"content":"Message-based","children":[{"content":"Email: A popular medium for delivering malicious content or links.","children":[{"content":"Phishing attempts, malware, ransomware, and spam often use this vector.","children":[],"payload":{"lines":"5,6"}}],"payload":{"lines":"4,6"}},{"content":"SMS: Mobile-based text messages containing phishing links (Smishing) or malicious content targeting smartphones.","children":[],"payload":{"lines":"6,7"}},{"content":"Instant Messaging (IM): Real-time messaging services exploited to deliver malware or phishing content.","children":[],"payload":{"lines":"7,9"}}],"payload":{"lines":"2,3"}},{"content":"Image-based","children":[{"content":"Malicious payloads embedded in images, which, when viewed, can exploit vulnerabilities.","children":[],"payload":{"lines":"11,13"}}],"payload":{"lines":"9,10"}},{"content":"File-based","children":[{"content":"Malicious software embedded within files, which, upon opening or execution, can lead to compromise.","children":[],"payload":{"lines":"15,17"}}],"payload":{"lines":"13,14"}},{"content":"Voice Call","children":[{"content":"Vishing (voice-based phishing): Criminals using phone calls to deceive victims into divulging personal information or following malicious instructions.","children":[],"payload":{"lines":"19,21"}}],"payload":{"lines":"17,18"}},{"content":"Removable Device","children":[{"content":"Devices like USBs used to introduce malware or exploit software vulnerabilities when connected to a system.","children":[],"payload":{"lines":"23,25"}}],"payload":{"lines":"21,22"}},{"content":"Vulnerable Software","children":[{"content":"Client-based: Software that requires installation on a user's system can be targeted for vulnerabilities.","children":[],"payload":{"lines":"27,28"}},{"content":"Agentless: Software that runs without installations or agents, making them harder to monitor and potentially vulnerable.","children":[],"payload":{"lines":"28,30"}}],"payload":{"lines":"25,26"}},{"content":"Unsupported Systems and Applications","children":[{"content":"Outdated software that no longer receives security updates can be a significant risk.","children":[],"payload":{"lines":"32,34"}}],"payload":{"lines":"30,31"}},{"content":"Unsecure Networks","children":[{"content":"Wireless: Unsecured Wi-Fi networks can be intercepted or exploited.","children":[],"payload":{"lines":"36,37"}},{"content":"Wired: Physical access to wired networks can lead to intrusion.","children":[],"payload":{"lines":"37,38"}},{"content":"Bluetooth: Vulnerabilities in Bluetooth can be exploited to snoop on or control devices.","children":[],"payload":{"lines":"38,40"}}],"payload":{"lines":"34,35"}},{"content":"Open Service Ports","children":[{"content":"Unsecured open ports allowing unauthorized access or attacks on services running on those ports.","children":[],"payload":{"lines":"42,44"}}],"payload":{"lines":"40,41"}},{"content":"Default Credentials","children":[{"content":"Devices or systems with unchanged default passwords can be easily accessed by attackers.","children":[],"payload":{"lines":"46,48"}}],"payload":{"lines":"44,45"}},{"content":"Supply Chain","children":[{"content":"Managed Service Providers (MSPs): If compromised, can provide access to their client's infrastructure.","children":[],"payload":{"lines":"50,51"}},{"content":"Vendors: Their systems, if breached, can act as a gateway to an organization's infrastructure.","children":[],"payload":{"lines":"51,52"}},{"content":"Suppliers: A compromise in a supplier's security can have ripple effects on their clients.","children":[],"payload":{"lines":"52,54"}}],"payload":{"lines":"48,49"}},{"content":"Human Vectors/Social Engineering","children":[{"content":"Phishing: Deceptive emails aiming to steal sensitive information.","children":[],"payload":{"lines":"56,57"}},{"content":"Vishing: Voice calls trying to deceive victims.","children":[],"payload":{"lines":"57,58"}},{"content":"Smishing: SMS-based phishing attempts.","children":[],"payload":{"lines":"58,59"}},{"content":"Misinformation/Disinformation: Spreading false information to deceive or manipulate.","children":[],"payload":{"lines":"59,60"}},{"content":"Impersonation: Pretending to be someone else to deceive a victim.","children":[],"payload":{"lines":"60,61"}},{"content":"Business Email Compromise: Deceptive tactics to manipulate employees into transferring funds or revealing sensitive data.","children":[],"payload":{"lines":"61,62"}},{"content":"Pretexting: Using fabricated scenarios to obtain personal data.","children":[],"payload":{"lines":"62,63"}},{"content":"Watering Hole: Compromising a commonly used website to target its visitors.","children":[],"payload":{"lines":"63,64"}},{"content":"Brand Impersonation: Imitating well-known brands to deceive victims.","children":[],"payload":{"lines":"64,65"}},{"content":"Typosquatting: Registering domains similar to popular ones to deceive users.","children":[],"payload":{"lines":"65,66"}}],"payload":{"lines":"54,55"}}],"payload":{"lines":"0,1"}},{})</script>
+</body>
+</html>
